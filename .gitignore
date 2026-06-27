@@ -1,0 +1,10 @@
+# WorkBuddy
+.workbuddy/
+
+# Temp files
+*.zip
+*.txt
+
+# OS
+.DS_Store
+Thumbs.db
