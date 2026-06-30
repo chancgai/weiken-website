@@ -8,7 +8,7 @@ var currentLang = 'zh';
 /* ---- 文本字典 (中文 -> 英文), 按长度降序排列以避免短串误匹配 ---- */
 var textDict = [
   /* === 长段落 (about 页面) === */
-  ["威恳非晶技术（浙江）有限公司是威肯集团旗下以创新驱动发展的先进材料制造企业，成立于2025年，传承前身15年行业深耕经验。公司占地面积31,000平方米，已通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系三体系认证。",
+  ["威恳非晶技术（浙江）有限公司是威恳集团旗下以创新驱动发展的先进材料制造企业，成立于2025年，传承前身15年行业深耕经验。公司占地面积31,000平方米，已通过ISO9001质量管理体系、ISO14001环境管理体系、ISO45001职业健康安全管理体系三体系认证。",
    "WCAN Amorphous Technology (Zhejiang) Co., Ltd. is an innovation-driven advanced materials manufacturer under the Wcan Group, established in 2025, inheriting 15 years of deep industry expertise. The company covers 31,000 sqm and has passed ISO9001, ISO14001, and ISO45001 triple system certifications."],
   ["公司非晶合金带材年产能达30,000吨，变压器铁芯年产能达20,000吨，带材宽度覆盖120mm至240mm全系列。产品涵盖铁基非晶合金带材（WCAN-H、WCAN-HK、WCAN-Z三种牌号）、油浸式变压器铁芯、干式变压器铁芯、立体卷铁芯及非晶电机铁芯，广泛应用于国家电网配电系统、新能源汽车驱动电机、高端家电压缩机及无人机永磁电机等领域。",
    "Annual capacity: 30,000 tons of amorphous alloy ribbons and 20,000 tons of transformer cores, with ribbon widths covering 120mm to 240mm. Products include Fe-based amorphous alloy ribbons (WCAN-H, WCAN-HK, WCAN-Z grades), oil-immersed/dry-type/3D wound transformer cores, and amorphous motor cores, widely used in national grid distribution systems, NEV drive motors, high-end home appliance compressors, and drone PM motors."],
@@ -34,7 +34,7 @@ var textDict = [
    "Three 10,000-ton amorphous ribbon lines, annual capacity of 30,000 tons ribbon & 20,000 tons cores, full process coverage"],
   ["产品远销亚洲、美洲、欧洲，与三星、LG、特变电工等全球知名企业建立长期合作",
    "Products exported to Asia, Americas, and Europe, with long-term partnerships with Samsung, LG, TBEA and more"],
-  ["威恳非晶技术（浙江）有限公司是威肯集团旗下以创新驱动发展的先进材料制造企业，成立于2025年，传承前身15年行业深耕经验。公司占地面积31,000平方米，非晶合金带材年产能达30,000吨，变压器铁芯年产能达20,000吨。",
+  ["威恳非晶技术（浙江）有限公司是威恳集团旗下以创新驱动发展的先进材料制造企业，成立于2025年，传承前身15年行业深耕经验。公司占地面积31,000平方米，非晶合金带材年产能达30,000吨，变压器铁芯年产能达20,000吨。",
    "WCAN Amorphous Technology (Zhejiang) Co., Ltd. is an innovation-driven advanced materials manufacturer under the Wcan Group, established in 2025, inheriting 15 years of industry expertise. The company covers 31,000 sqm, with annual capacity of 30,000 tons of amorphous alloy ribbons and 20,000 tons of transformer cores."],
   ["公司构建了覆盖「研发—带材制造—铁芯成品」的垂直整合体系，产品涵盖铁基非晶合金带材、油浸式/干式/立体变压器铁芯及非晶电机铁芯，广泛应用于国家电网、新能源、新能源汽车及高端家电领域。已通过ISO9001、ISO14001、ISO45001三体系认证，拥有专利52项（含发明专利13项）。",
    "The company has built a vertical integration system covering R&D, ribbon manufacturing, and core finishing. Products include Fe-based amorphous alloy ribbons, oil-immersed/dry-type/3D wound transformer cores, and amorphous motor cores, widely used in national grid, new energy, NEV, and high-end home appliance sectors. Certified to ISO9001, ISO14001, ISO45001, with 52 patents (including 13 invention patents)."],
