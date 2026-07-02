@@ -14,7 +14,24 @@
   </style>
 </head>
 <body>
+  <script>
+    // Set Netlify site URL for Identity widget
+    // Site is on GitHub Pages, but Identity service is on Netlify
+    localStorage.setItem("netlifySiteURL", "https://eloquent-florentine-5d5215.netlify.app");
+  </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Configure Identity widget to use Netlify API URL
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
   <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
 </body>
 </html>
