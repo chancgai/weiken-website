@@ -1,0 +1,84 @@
+backend:
+  name: github
+  repo: chancgai/weiken-website
+  branch: master
+  auth_type: pkce
+  app_id: REPLACE_WITH_YOUR_CLIENT_ID
+
+site_url: https://www.wcan-amorphous.cn
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Website Pages"
+    label_singular: "Page"
+    delete: false
+    create: false
+    files:
+      - file: "index.html"
+        label: "Home"
+        name: "index"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "about.html"
+        label: "About Us"
+        name: "about"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "news.html"
+        label: "News"
+        name: "news"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "contact.html"
+        label: "Contact"
+        name: "contact"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "procurement.html"
+        label: "Procurement"
+        name: "procurement"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "products.html"
+        label: "Products"
+        name: "products"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "product-strip.html"
+        label: "Amorphous Ribbon"
+        name: "product-strip"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "product-oil-immersed.html"
+        label: "Oil-immersed Core"
+        name: "product-oil-immersed"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "product-dry-type.html"
+        label: "Dry-type Core"
+        name: "product-dry-type"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "product-stereo.html"
+        label: "3D Wound Core"
+        name: "product-stereo"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
+      - file: "product-motor.html"
+        label: "Motor Core"
+        name: "product-motor"
+        format: html
+        fields:
+          - {label: "HTML Content", name: "body", widget: "text", hint: "Edit page HTML. Only modify text content, do not change HTML tags."}
