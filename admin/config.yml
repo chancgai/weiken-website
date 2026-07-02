@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: chancgai/weiken-website
+  name: git-gateway
   branch: master
-  auth_type: pkce
-  app_id: Ov23liD3pQno8OagVeBm
 
 site_url: https://www.wcan-amorphous.cn
 media_folder: "images"
