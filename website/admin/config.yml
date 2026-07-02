@@ -3,7 +3,7 @@ backend:
   repo: chancgai/weiken-website
   branch: master
   auth_type: pkce
-  app_id: REPLACE_WITH_YOUR_CLIENT_ID
+  app_id: Ov23liD3pQno8OagVeBm
 
 site_url: https://www.wcan-amorphous.cn
 media_folder: "images"
