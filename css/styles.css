@@ -919,7 +919,7 @@ ul, ol { list-style: none; }
 
 .market-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
 }
