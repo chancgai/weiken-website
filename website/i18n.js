@@ -30,8 +30,8 @@ var textDict = [
   /* === 首页段落 === */
   ["传承15年技术积淀，专注铁基非晶合金材料研发与生产，驱动高效世界",
    "15 years of technical expertise in Fe-based amorphous alloy R&D and manufacturing, driving an efficient world"],
-  ["三条万吨级非晶带材产线，年产能30,000吨带材与20,000吨铁芯，从材料到成品全流程覆盖",
-   "Three 10,000-ton amorphous ribbon lines, annual capacity of 30,000 tons ribbon & 20,000 tons cores, full process coverage"],
+  ["为客户提供非晶油浸式变压器铁芯、非晶干式变压器铁芯和立体变压器铁芯定制服务",
+   "Providing customers with customized services for amorphous oil-immersed transformer cores, dry-type transformer cores, and 3D wound transformer cores"],
   ["产品远销亚洲、美洲、欧洲，与三星、LG、特变电工等全球知名企业建立长期合作",
    "Products exported to Asia, Americas, and Europe, with long-term partnerships with Samsung, LG, TBEA and more"],
   ["威恳非晶技术（浙江）有限公司是威恳集团旗下以创新驱动发展的先进材料制造企业，成立于2025年，传承前身15年行业深耕经验。公司占地面积31,000平方米，非晶合金带材年产能达30,000吨，变压器铁芯年产能达20,000吨。",

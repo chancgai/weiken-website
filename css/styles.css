@@ -473,6 +473,42 @@ ul, ol { list-style: none; }
   background: var(--hero-accent-hover);
   transform: translateY(-2px);
 }
+/* Hero product showcase (slide 2) */
+.hero-products {
+  display: flex;
+  gap: 16px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-product-item {
+  display: block;
+  width: 170px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.hero-product-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+.hero-product-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+.hero-product-item span {
+  display: block;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 1.4;
+}
 
 /* 轮播控制 */
 .hero-arrows {
@@ -1545,6 +1581,9 @@ ul, ol { list-style: none; }
   }
 
   .hero-content h1 { font-size: 28px; }
+  .hero-product-item { width: 130px; }
+  .hero-product-item img { height: 80px; }
+  .hero-product-item span { font-size: 12px; }
   .hero-content p { font-size: 15px; }
 
   .page-banner { height: 200px; }
