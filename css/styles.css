@@ -376,6 +376,12 @@ ul, ol { list-style: none; }
   background-position: center;
   background-repeat: no-repeat;
 }
+.hero-slide-bg-4 {
+  background-image: url("../images/banner-04.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* 暗色遮罩 */
 .hero-slide::after {
