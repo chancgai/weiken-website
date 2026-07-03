@@ -670,11 +670,136 @@ ul, ol { list-style: none; }
 /* ============================================================
    关于板块 (首页)
    ============================================================ */
-.about-section {
+/* Showcase section (products + about) */
+.showcase-section {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 420px;
+}
+.showcase-products {
+  background: linear-gradient(135deg, #0d2b4e 0%, #1a4570 100%);
+  padding: 48px 44px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  align-content: center;
+}
+.showcase-product-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.showcase-product-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+.showcase-product-card .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+.showcase-product-card .icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: rgba(255, 255, 255, 0.85);
+  fill: none;
+  stroke-width: 1.5;
+}
+.showcase-product-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+.showcase-product-card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin: 0;
+}
+.showcase-product-card.showcase-more {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.03);
+}
+.showcase-product-card.showcase-more h3 {
+  font-size: 15px;
+}
+.showcase-product-card.showcase-more .arrow {
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.showcase-product-card.showcase-more:hover .arrow {
+  transform: translateX(6px);
+  color: #fff;
+}
+.showcase-about {
+  background: #f7f8fa;
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.showcase-about .eyebrow {
+  font-size: 13px;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.showcase-about .eyebrow-cn {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.showcase-about .divider {
+  width: 36px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.showcase-about p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.showcase-about .more-link {
+  margin-top: 8px;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .showcase-section {
+    grid-template-columns: 1fr;
+  }
+  .showcase-products {
+    padding: 32px 28px;
+  }
+  .showcase-about {
+    padding: 32px 28px;
+  }
+}
+@media (max-width: 600px) {
+  .showcase-products {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about-visual {
@@ -1517,13 +1642,11 @@ ul, ol { list-style: none; }
     padding-left: 32px;
   }
 
-  .about-section,
   .market-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .about-visual,
   .market-visual {
     height: 280px;
   }
