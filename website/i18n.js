@@ -222,7 +222,8 @@ var textDict = [
   ["查看全部产品", "View All Products"],
   ["非晶电机铁芯", "Amorphous Motor Core"],
   ['典型电磁性能', 'Typical Electromagnetic Properties'],
-  ['多层复合带材', 'Multi-Layer Composite Ribbon'],
+  ['多层复合带材', 'Multi-Layer Composite Ribbon'],    ['制造能力规格', 'Manufacturing Capabilities'],
+
   ['定制尺寸规格', 'Custom Size Specifications'],
   ["三体系认证", "Triple System Certification"],
   ["铁芯内角R", "Core Inner Corner R"],
