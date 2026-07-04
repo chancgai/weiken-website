@@ -1749,3 +1749,112 @@ ul, ol { list-style: none; }
     justify-self: auto;
   }
 }
+
+
+/* ============================================================
+   产品页改版新增样式 v16
+   ============================================================ */
+
+/* 宽表格横向滚动容器 */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 32px;
+}
+.table-wrapper .spec-table {
+  min-width: 600px;
+  margin-bottom: 0;
+}
+
+/* 双列对比卡片网格 */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+.compare-card {
+  padding: 32px 28px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--primary);
+}
+.compare-card.amorphous {
+  border-top-color: var(--primary);
+}
+.compare-card.steel {
+  border-top-color: var(--muted);
+}
+.compare-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 16px;
+}
+.compare-card ul {
+  list-style: none;
+  padding: 0;
+}
+.compare-card ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.compare-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.compare-card.steel ul li::before {
+  background: var(--muted);
+}
+@media (max-width: 768px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 数据高亮卡片 */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+.stat-card {
+  text-align: center;
+  padding: 32px 16px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--primary);
+  transition: box-shadow var(--transition);
+}
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.stat-card .stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-display);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.stat-card .stat-label {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
