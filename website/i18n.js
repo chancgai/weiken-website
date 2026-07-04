@@ -100,7 +100,7 @@ var textDict = [
    "Driven by technology innovation, guided by customer value, continuously advancing the amorphous materials industry"],
   ["采用铁基非晶合金带材卷绕成型，空载损耗较硅钢降低70%以上",
    "Wound from Fe-based amorphous alloy ribbon, no-load loss reduced by over 70% compared to silicon steel"],
-  ["家电类180,000台/年；汽车驱动电机类1,600台/年", "Home appliance: 180,000 units/year; Automotive drive motors: 1,600 units/year"],
+  ["家电类180,000台/年；汽车驱动1,600万套/年", "Home appliance: 180,000 units/year; Automotive drive: 16,000,000 sets/year"],
   ["铁基非晶合金带材凭借优异软磁性能，广泛应用于电力与电子领域",
    "Fe-based amorphous alloy ribbons are widely used in power and electronics due to excellent soft magnetic properties"],
   ["三维卷绕结构，三相磁路完全对称，低损耗低噪音的节能型铁芯",
@@ -296,7 +296,13 @@ var textDict = [
   ["越南", "Vietnam"],
   ["印度", "India"],
   ["南美", "S. America"],
-  ["首页", "Home"]
+  ["首页", "Home"],
+  ['服务新能源汽车、家电及电力行业全球领军企业', 'Serving leading enterprises in new energy vehicles, home appliances, and power industry worldwide'],
+  ['新能源汽车', 'New Energy Vehicles'],
+  ['家电领域', 'Home Appliances'],
+  ['电力行业', 'Power Industry'],
+  ['全球客户', 'Global Customers'],
+  ['研发与标准', 'R&D and Standards']
 ];
 
 /* ---- 将数组转为对象方便查找, 同时保留有序数组用于遍历 ---- */
