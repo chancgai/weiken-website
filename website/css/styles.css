@@ -782,116 +782,248 @@ ul, ol { list-style: none; }
 }
 
 /* ============================================================
-   关于板块 (首页)
+   关于我们 + 产品速览板块 (首页) — 一体式现代商务设计
    ============================================================ */
-/* Showcase section (products + about) */
-.showcase-section {
+.about-showcase {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 0;
-  border-radius: var(--radius-lg);
+  grid-template-columns: 1.2fr 1fr;
+  border-radius: 16px;
   overflow: hidden;
-  min-height: 420px;
-  box-shadow: var(--shadow-lg);  /* v17 新增：阴影 */
+  min-height: 440px;
+  box-shadow: 0 8px 40px rgba(26, 26, 46, 0.12);
+  position: relative;
 }
-.showcase-products {
-  background: linear-gradient(135deg, #0d2b4e 0%, #1a4570 100%);
-  padding: 60px 52px;             /* v17 微调：48→60 留白更足 */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;                       /* v17 微调：24→20 与卡片内 padding 协调 */
-  align-content: center;
-}
-/* v17 改造：卡片改横向布局（图标在左，文在右） */
-.showcase-product-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+
+/* 左侧：深海蓝渐变背景 */
+.about-showcase-left {
+  background: linear-gradient(135deg, #0d2b4e 0%, #1a4570 50%, #0d3b6e 100%);
+  padding: 52px 44px;
   display: flex;
-  flex-direction: row;             /* v17：column→row */
-  align-items: flex-start;         /* v17 新增 */
-  gap: 16px;                       /* v17 新增：图标与文间距 */
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* 3个产品卡片横向排布 */
+.about-showcase-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.about-feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 10px;
+  padding: 24px 18px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03);
 }
-/* v17 新增：左 3px 主色条 */
-.showcase-product-card::before {
+
+.about-feature-card::before {
   content: '';
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--accent);
-  transform: scaleY(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 168, 232, 0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
-.showcase-product-card:hover::before {
-  transform: scaleY(1);
+
+.about-feature-card:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.20);
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.06), 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-.showcase-product-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.25);
+
+.about-feature-card:hover::before {
+  opacity: 1;
 }
-.showcase-product-card .icon {
-  width: 44px;                      /* v17 微调：40→44 */
-  height: 44px;
+
+.about-feature-icon {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  flex-shrink: 0;                  /* v17 新增：避免被压缩 */
+  margin-bottom: 16px;
 }
-.showcase-product-card .icon svg {
-  width: 24px;                      /* v17 微调：32→24 适应 44px 框 */
-  height: 24px;
-  stroke: rgba(255, 255, 255, 0.95);
+
+.about-feature-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: rgba(255, 255, 255, 0.9);
   fill: none;
-  stroke-width: 1.5;
 }
-.showcase-product-card .text {      /* v17 新增：内容包裹层 */
-  flex: 1;
-  min-width: 0;
-}
-.showcase-product-card h3 {
-  font-size: 16px;                  /* v17 微调：17→16 与正文协调 */
+
+.about-feature-card h3 {
+  font-size: 15px;
   font-weight: 600;
   color: #fff;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   line-height: 1.4;
 }
-.showcase-product-card p {
-  font-size: 12px;                  /* v17 微调：13→12 紧凑 */
-  color: rgba(255, 255, 255, 0.65);
+
+.about-feature-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.6;
   margin: 0;
 }
-.showcase-product-card.showcase-more {
-  grid-column: 1 / -1;
-  flex-direction: row;
+
+/* 全局主按钮：了解更多 */
+.about-showcase-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 0.03);
-}
-.showcase-product-card.showcase-more h3 {
-  font-size: 15px;
-}
-.showcase-product-card.showcase-more .arrow {
-  color: rgba(255, 255, 255, 0.6);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.showcase-product-card.showcase-more:hover .arrow {
-  transform: translateX(6px);
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--primary);
   color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 16px rgba(21, 101, 192, 0.3);
 }
 
+.about-showcase-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.about-showcase-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
+}
+
+.about-showcase-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* 右侧：白色柔和浅灰渐变 */
+.about-showcase-right {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 50%, #eef2f7 100%);
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* 弱化分割线：柔和渐变过渡 */
+.about-showcase-right::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(13, 43, 78, 0.08) 20%, rgba(13, 43, 78, 0.08) 80%, transparent 100%);
+}
+
+.about-eyebrow {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.about-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+
+.about-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+/* 核心数据高亮 */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-stat-num {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+}
+
+.about-stat-unit {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-left: 2px;
+}
+
+.about-stat-label {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .about-showcase {
+    grid-template-columns: 1fr;
+  }
+  .about-showcase-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-showcase-right::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-showcase-cards {
+    grid-template-columns: 1fr;
+  }
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-showcase-left,
+  .about-showcase-right {
+    padding: 36px 28px;
+  }
+}
 /* v17 调整：关于板块左 padding 增大，背景不变 */
 .showcase-about {
   background: #f7f8fa;

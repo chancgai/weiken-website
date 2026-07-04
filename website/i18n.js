@@ -302,7 +302,10 @@ var textDict = [
   ['家电领域', 'Home Appliances'],
   ['电力行业', 'Power Industry'],
   ['全球客户', 'Global Customers'],
-  ['研发与标准', 'R&D and Standards']
+  ['研发与标准', 'R&D and Standards'],
+  ['行业经验', 'Industry Experience'],
+  ['厂区面积', 'Factory Area'],
+  ['授权专利', 'Authorized Patents']
 ];
 
 /* ---- 将数组转为对象方便查找, 同时保留有序数组用于遍历 ---- */
