@@ -282,6 +282,7 @@ var textDict = [
   ["企业新闻", "News"],
   ['非晶合金', 'Amorphous Alloy'],
   ['制造能力', 'Manufacturing Capabilities'],
+  ['节能效益', 'Energy Saving Benefits'],
   ["年产能", "Annual Capacity"],
   ["参数", "Parameter"],
   ["数值", "Value"],
