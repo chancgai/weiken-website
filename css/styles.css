@@ -1166,19 +1166,7 @@ ul, ol { list-style: none; }
 }
 
 /* v17 改造：默认 1px 主色边，hover 填充 */
-.more-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--primary);
-  letter-spacing: 0.02em;
-  padding: 8px 18px;
-  border: 1px solid var(--primary);
-  border-radius: var(--radius);
-  transition: background var(--transition), color var(--transition), gap var(--transition);
-}
+
 
 .more-link:hover {
   background: #0d3b6e;
