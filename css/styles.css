@@ -1177,122 +1177,216 @@ ul, ol { list-style: none; }
 }
 
 /* ============================================================
-   企业文化卡片
+   企业文化板块 — v23 全面重构
    ============================================================ */
+.culture-section {
+  padding: 64px 0;
+}
+
+/* 标题区域 */
+.culture-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.culture-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.culture-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary));
+  border-radius: 1px;
+}
+.culture-eyebrow::after {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: 1px;
+}
+
+.culture-main-title {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.culture-intro {
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.75;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 三栏卡片网格 */
 .culture-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;   /* v17 改造：1 大 2 小 */
-  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
 }
 
+/* 卡片基础样式 */
 .culture-card {
-  background: var(--bg);
+  background: #FFFFFF;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  padding: 48px 32px;
+  text-align: left;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
   position: relative;
   overflow: hidden;
-  border-top: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
 }
 
-.culture-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
-  border-top-color: var(--primary);
+/* 卡片序号 — 左上角加粗品牌蓝实心数字 */
+.culture-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
-/* v17 改造：vision 卡升深色 */
-.culture-card.feature {
-  background: linear-gradient(135deg, #0d2b4e 0%, #1a4570 100%);
-  border-color: transparent;
-  color: #FFFFFF;
-  text-align: left;
-  padding: 48px 40px;
-}
-.culture-card.feature h3,
-.culture-card.feature p {
-  color: #FFFFFF;
-}
-.culture-card.feature p {
-  opacity: 0.85;
-}
-.culture-card.feature .culture-icon {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-.culture-card.feature .culture-icon svg {
-  color: #FFFFFF;
-}
-.culture-card.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-}
-
-/* v17 改造：图标背景从圆形浅蓝→1px 主色描边方块 */
+/* 图标容器 */
 .culture-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 20px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: 1.5px solid var(--primary);
-  border-radius: 8px;
-  transition: border-width var(--transition), background var(--transition);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  transition: transform 0.35s ease;
 }
-.culture-card.feature .culture-icon {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .culture-icon svg {
-  width: 26px;
-  height: 26px;
-  color: var(--primary);
-  transition: color var(--transition);
-}
-.culture-card.feature .culture-icon svg {
-  color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.35s ease;
 }
 
-.culture-card:hover .culture-icon {
-  border-width: 2.5px;
-  background: var(--primary-light);
+/* 三张卡片专属辅助色 */
+.culture-card-vision {
+  background: linear-gradient(160deg, #E6F0FF 0%, #F5F9FF 60%, #FFFFFF 100%);
+  border: 1.5px solid rgba(21, 101, 192, 0.25);
+  min-height: calc(100% + 20px);
 }
-.culture-card.feature:hover .culture-icon {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: #FFFFFF;
+.culture-icon-vision {
+  background: rgba(21, 101, 192, 0.10);
+}
+.culture-icon-vision svg {
+  color: #1565C0;
 }
 
+.culture-card-mission {
+  background: #FFFFFF;
+}
+.culture-icon-mission {
+  background: rgba(46, 125, 50, 0.10);
+}
+.culture-icon-mission svg {
+  color: #2E7D32;
+}
+
+.culture-card-values {
+  background: #FFFFFF;
+}
+.culture-icon-values {
+  background: rgba(13, 61, 140, 0.10);
+}
+.culture-icon-values svg {
+  color: #0D3D8C;
+}
+
+/* 卡片标题 */
 .culture-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 0;
   letter-spacing: 0.01em;
 }
 
-.culture-card p {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.7;
+/* 分隔细线 */
+.culture-divider {
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), rgba(21, 101, 192, 0.2));
+  border-radius: 1px;
+  margin: 16px 0;
 }
 
+/* 卡片正文 */
+.culture-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* hover 交互 */
+.culture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(26, 26, 46, 0.10);
+  border-color: rgba(21, 101, 192, 0.35);
+}
+.culture-card:hover .culture-icon svg {
+  transform: scale(1.10);
+}
+.culture-card-vision:hover {
+  border-color: rgba(21, 101, 192, 0.45);
+  box-shadow: 0 12px 40px rgba(21, 101, 192, 0.15);
+}
+
+/* 滚动入场动画 */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.8,.2,1);
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.culture-grid .scroll-reveal:nth-child(1) { transition-delay: 0ms; }
+.culture-grid .scroll-reveal:nth-child(2) { transition-delay: 120ms; }
+.culture-grid .scroll-reveal:nth-child(3) { transition-delay: 240ms; }
+
+/* 响应式 */
 @media (max-width: 900px) {
   .culture-grid {
     grid-template-columns: 1fr;
   }
-  .culture-card.feature {
-    text-align: center;
-    padding: 40px 32px;
+  .culture-card-vision {
+    min-height: auto;
   }
-  .culture-card.feature .culture-icon {
-    margin: 0 auto 20px;
+  .culture-main-title {
+    font-size: 32px;
+  }
+  .culture-intro {
+    font-size: 16px;
   }
 }
+
 
 /* ============================================================
    产品展示网格 — 首页 3×2 等宽等高布局
@@ -2343,8 +2437,8 @@ ul, ol { list-style: none; }
 .scroll-reveal:nth-child(6) { transition-delay: 600ms; }
 
 /* v18: Culture card numbering */
-.culture-card::after { content: attr(data-num); position: absolute; top: 20px; right: 24px; font-size: 36px; font-weight: 800; color: rgba(21, 101, 192, 0.08); line-height: 1; }
-.culture-card.feature::after { color: rgba(255, 255, 255, 0.10); }
+
+
 
 /* v18: Banner text entrance */
 .hero-slide .hero-content > * { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
