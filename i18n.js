@@ -546,6 +546,14 @@ var textDict = [
    "Technology (Zhejiang) Co., Ltd."],
   ["技术（浙江）有限公司（Wcan Amorphous）",
    "Technology (Zhejiang) Co., Ltd. (Wcan Amorphous)"],
+  ['叠片系数', 'Stacking Factor'],
+  ['四框五柱 / 三框三柱', '4-frame 5-column / 3-frame 3-column'],
+  ['10kV油浸式变压器', '10kV Oil-immersed Transformer'],
+  ['45亿', '4.5 billion'],
+  ['360万', '3.6 million'],
+  ['项', 'items'],
+  ['年', 'years'],
+  ['吨', 'tons'],
 ];
 
 /* ---- 将数组转为对象方便查找, 同时保留有序数组用于遍历 ---- */
