@@ -305,7 +305,7 @@ var textDict = [
   ['研发与标准', 'R&D and Standards'],
   ['行业经验', 'Industry Experience'],
   ['厂区面积', 'Factory Area'],
-  ['授权专利', 'Authorized Patents']
+  ['授权专利', 'Authorized Patents'],
   ["威恳非晶技术（浙江）有限公司",
    "WCAN Amorphous Technology (Zhejiang) Co., Ltd."],
   ["威恳非晶亮相2026 CWIEME上海国际线圈展",
