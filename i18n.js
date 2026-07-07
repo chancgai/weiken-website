@@ -542,9 +542,16 @@ var textDict = [
    "© 2026 WCAN Amorphous Technology (Zhejiang) Co., Ltd. | www.wcan-amorphous.com"],
   ["技术支持：威恳非晶信息技术部",
    "Technical Support: WCAN IT Dept."],
+  ["技术（浙江）有限公司",
+   "Technology (Zhejiang) Co., Ltd."],
+  ["技术（浙江）有限公司（Wcan Amorphous）",
+   "Technology (Zhejiang) Co., Ltd. (Wcan Amorphous)"],
 ];
 
 /* ---- 将数组转为对象方便查找, 同时保留有序数组用于遍历 ---- */
+// Sort by descending Chinese text length for correct fuzzy matching
+textDict.sort(function(a, b) { return b[0].length - a[0].length; });
+
 var textMap = {};
 for (var i = 0; i < textDict.length; i++) {
   textMap[textDict[i][0]] = textDict[i][1];
