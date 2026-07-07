@@ -70,7 +70,7 @@ var textDict = [
   ["面向新能源汽车、家电及工业电机领域，提供非晶合金产品定制化解决方案，满足多样化应用需求",
    "Providing customized amorphous alloy product solutions for NEV, home appliance, and industrial motor applications, meeting diverse application needs"],
   ["技术创新为核心驱动力，与高校、企业及OEM客户协同创新，以精益求精的工艺保障产品品质",
-   "Technology innovation as the core driving force, collaborative innovation with universities, enterprises, and OEM customers, ensuring product quality through精益求精 craftsmanship"],
+   "Technology innovation as the core driving force, collaborative innovation with universities, enterprises, and OEM customers, ensuring product quality through meticulous craftsmanship"],
   ["致力于成为全球先进的铁基非晶合金材料研发生产企业，以及非晶电机全产业链的引领者",
    "Committed to becoming a globally advanced Fe-based amorphous alloy R&D and production enterprise, and a leader in the full amorphous motor industry chain"],
   ["采用快速凝固工艺生产，具有高磁导率、低铁损特性，是制造高效变压器铁芯的核心材料",
