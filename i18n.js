@@ -618,7 +618,26 @@ function switchLang(lang) {
       if (newText !== text) node.nodeValue = newText;
     });
 
-    /* 3. 处理 placeholder 属性 */
+    /* 3. 处理 alt 属性 */
+    var imgEls = document.querySelectorAll('img[alt]');
+    for (var i = 0; i < imgEls.length; i++) {
+      var alt = imgEls[i].getAttribute('alt');
+      if (!alt) continue;
+      if (!imgEls[i]._zhAlt) imgEls[i]._zhAlt = alt;
+      if (textMap[alt]) {
+        imgEls[i].setAttribute('alt', textMap[alt]);
+      } else {
+        var newAlt = alt;
+        for (var k = 0; k < textDict.length; k++) {
+          if (newAlt.indexOf(textDict[k][0]) !== -1) {
+            newAlt = newAlt.split(textDict[k][0]).join(textDict[k][1]);
+          }
+        }
+        if (newAlt !== alt) imgEls[i].setAttribute('alt', newAlt);
+      }
+    }
+
+    /* 4. 处理 placeholder 属性 */
     var phEls = document.querySelectorAll('input[placeholder], textarea[placeholder]');
     for (var i = 0; i < phEls.length; i++) {
       var ph = phEls[i].getAttribute('placeholder');
@@ -643,7 +662,13 @@ function switchLang(lang) {
       if (node._zhOrig) node.nodeValue = node._zhOrig;
     });
 
-    /* 3. 恢复 placeholder */
+    /* 3. 恢复 alt 属性 */
+    var imgEls = document.querySelectorAll('img[alt]');
+    for (var i = 0; i < imgEls.length; i++) {
+      if (imgEls[i]._zhAlt) imgEls[i].setAttribute('alt', imgEls[i]._zhAlt);
+    }
+
+    /* 4. 恢复 placeholder */
     var phEls = document.querySelectorAll('input[placeholder], textarea[placeholder]');
     for (var i = 0; i < phEls.length; i++) {
       if (phEls[i]._zhPhOrig) phEls[i].setAttribute('placeholder', phEls[i]._zhPhOrig);
