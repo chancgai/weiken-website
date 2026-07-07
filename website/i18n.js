@@ -538,7 +538,7 @@ var textDict = [
    "3D Wound Transformer Core - WCAN Amorphous Technology (Zhejiang) Co., Ltd."],
   ["非晶电机铁芯 - 威恳非晶技术（浙江）有限公司",
    "Amorphous Motor Core - WCAN Amorphous Technology (Zhejiang) Co., Ltd."],
-  ["&copy; 2026 威恳非晶技术（浙江）有限公司 &nbsp;|&nbsp; www.wcan-amorphous.com",
+  ["© 2026 威恳非晶技术（浙江）有限公司  |  www.wcan-amorphous.com",
    "© 2026 WCAN Amorphous Technology (Zhejiang) Co., Ltd. | www.wcan-amorphous.com"],
   ["技术支持：威恳非晶信息技术部",
    "Technical Support: WCAN IT Dept."],
